@@ -1,0 +1,126 @@
+[ 2016-05-05T09:29:24+08:00 ] 127.0.0.1 /LLMall/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-05-05T09:29:25+08:00 ] 127.0.0.1 /LLMall/Login/loginPage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+
+[ 2016-05-05T09:29:29+08:00 ] 127.0.0.1 /LLMall/Login/loginCheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+
+[ 2016-05-05T09:29:29+08:00 ] 127.0.0.1 /LLMall/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+
+[ 2016-05-05T09:29:29+08:00 ] 127.0.0.1 /LLMall/Index/dist/img/user4-128x128.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+
+[ 2016-05-05T09:29:29+08:00 ] 127.0.0.1 /LLMall/Public/fonts/ionicons.ttf?v=2.0.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-05T09:29:29+08:00 ] 127.0.0.1 /LLMall/Public/fonts/ionicons.woff?v=2.0.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000192s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-05T09:38:47+08:00 ] 127.0.0.1 /LLMall/dist/img/user4-128x128.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000180s ]
+
+[ 2016-05-05T09:38:55+08:00 ] 127.0.0.1 /LLMall/Clazz/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000181s ]
+
+[ 2016-05-05T09:38:55+08:00 ] 127.0.0.1 /LLMall/Clazz/dist/img/user4-128x128.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+
+[ 2016-05-05T09:39:28+08:00 ] 127.0.0.1 /LLMall/Clazz/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+ERR: 无法加载控制器:Clazz
+
+[ 2016-05-05T09:48:45+08:00 ] 127.0.0.1 /LLMall/dist/img/user4-128x128.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+
+[ 2016-05-05T10:11:29+08:00 ] 127.0.0.1 /LLMall/Goods/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+ERR: 无法加载控制器:Goods
+
+[ 2016-05-05T10:11:48+08:00 ] 127.0.0.1 /LLMall/Goods/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+
+[ 2016-05-05T10:11:48+08:00 ] 127.0.0.1 /LLMall/lib/zepto.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+ERR: 无法加载控制器:Lib
+
+[ 2016-05-05T10:11:48+08:00 ] 127.0.0.1 /LLMall/css/frozen.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+ERR: 无法加载控制器:Css
+
+[ 2016-05-05T10:11:48+08:00 ] 127.0.0.1 /LLMall/js/frozen.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+ERR: 无法加载控制器:Js
+
+[ 2016-05-05T10:11:48+08:00 ] 127.0.0.1 /LLMall/Goods/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+ERR: 非法操作:demo.css
+
+[ 2016-05-05T10:12:59+08:00 ] 127.0.0.1 /LLMall/Goods/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+
+[ 2016-05-05T10:12:59+08:00 ] 127.0.0.1 /LLMall/Public/wx/lib/zepto.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-05T10:12:59+08:00 ] 127.0.0.1 /LLMall/Goods/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+ERR: 非法操作:demo.css
+
+[ 2016-05-05T10:12:59+08:00 ] 127.0.0.1 /LLMall/Public/wx/img/loading_sprite.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+
+[ 2016-05-05T10:13:02+08:00 ] 127.0.0.1 /LLMall/Goods/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+ERR: 非法操作:demo.css
+

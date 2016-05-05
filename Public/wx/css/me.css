@@ -1,0 +1,128 @@
+/*固定模块 - 账户信息*/
+.accountInfo-wrapper {
+  display: block;
+  height: 180px;
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcfff4+0,e9e9ce+100;Wax+3D+%232 */
+background: #fcfff4; /* Old browsers */
+background: -moz-linear-gradient(top,  #fcfff4 0%, #e9e9ce 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #fcfff4 0%,#e9e9ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+.ui-row-flex-ver {
+  height: 180px;
+}
+.ui-row-flex-ver .ui-col:first-child {
+  margin-top: 36px;
+  line-height: 36px;
+}
+.ui-row-flex-ver .ui-col:last-child {
+  margin-bottom: 34px;
+  line-height: 34px;
+}
+
+.accontName {
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  font-size: 20px;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+  color: #333;
+  text-shadow:1px 1px 1px rgba(0,0,0,.15);
+}
+.accontTeln {
+  display: block;
+  height: 27px;
+  line-height: 27px;
+  font-size: 12px;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+  color: #333;
+  text-shadow:1px 1px 1px rgba(0,0,0,.15);
+}
+.accontIcons {
+  display: block;
+  height: 55px;
+  line-height: 55px;
+}
+.accontIcons .vlico {
+  color: #EF5D4B;
+  text-shadow:1px 1px 1px rgba(0,0,0,.15);
+}
+/*环形进度条*/
+@-webkit-keyframes toggle {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes toggle {
+  0% {opacity: 0;}
+
+  100% {opacity: 1;}
+}
+.ring-auto-margin {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 25px auto;
+}
+.progress-ring {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 120px;
+}
+.progress-ring div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110px;
+  width: 110px;
+/*   border: 3x solid #F0F0F0; */
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.progress-ring .progress-left, .progress-ring .progress-right, .progress-ring .progress-cover {
+  clip: rect(0 60px 120px 0);
+  /* rect( [0 | <width/2> | <height> | 0] ) */
+}
+.progress-ring .progress-right {
+  opacity: 0;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.progress-ring .progress-text {
+  border: none;
+  text-align: center;
+  font-size: 30px;
+  color: #949494;
+  /* 进度文字颜色 */
+  line-height: 120px;
+}
+.progress-ring .progress-percent {
+  font-size: .55em;
+  font-style: italic;
+}
+.progress-ring .progress-level {
+  border: none;
+  text-align: center;
+  /* 进度文字颜色 */
+}
+.progress-ring .progress-title {
+  border: none;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 35px;
+}
+.progress-ring .progress-level-num {
+  border: none;
+  display: block;
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 25px;
+}

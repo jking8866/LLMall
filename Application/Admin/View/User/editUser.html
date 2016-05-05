@@ -1,0 +1,77 @@
+<extend name="Common/main" />
+<block name="content">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        修改用户
+        <small>用户管理</small>
+      </h1>
+      <!-- <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol> -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    <div class="row">
+      <div class="col-md-6">
+              <!-- Horizontal Form -->
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">基础信息</h3>
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                <form action="__APP__/User/updateUser" method="POST" enctype="multipart/form-data">
+                <input type="hidden" value="{{$UserBean.id}}" name="id">
+                  <div class="box-body">
+                    <div class="form-group col-xs-9">
+                      <label for="activitytitle">登录名</label>
+                      <input class="form-control" id="user_name" name="user_name" placeholder="登录名" value="{{$UserBean.user_name}}">
+                    </div>
+                    <div class="form-group col-xs-9">
+                      <label for="activitytitle">昵称</label>
+                      <input class="form-control" id="nick_name" name="nick_name" placeholder="昵称" value="{{$UserBean.nick_name}}" >
+                    </div>
+                    <div class="form-group col-xs-9">
+                      <label for="role_id">关联角色</label>
+                      <select class="form-control" id="role_id" name="role_id">
+                      		<option value="0">请选择</option>
+							<volist name="roleList" id="roleListVo"  >
+						              <eq name="UserBean.role_id" value="$roleListVo.id"> 
+						                        <option      value='{{$roleListVo.id}}'  selected="selected"     > {{$roleListVo.role_name}}</option>
+						               <else/>
+						                        <option      value='{{$roleListVo.id}}'       > {{$roleListVo.role_name}}</option>
+						               </eq>
+						    </volist>
+                      </select>
+                    </div>
+ 					<div class="form-group col-xs-9">
+                      <label for="role_id">关联校区</label>
+                      <select class="form-control" id="area_id" name="area_id">
+                      		<option value="0">请选择</option>
+							<volist name="AreaList" id="AreaListVo"  >
+						              <eq name="UserBean.area_id" value="$AreaListVo.id"> 
+						                        <option      value='{{$AreaListVo.id}}'  selected="selected"     > {{$AreaListVo.area_name}}</option>
+						               <else/>
+						                        <option      value='{{$AreaListVo.id}}'       > {{$AreaListVo.area_name}}</option>
+						               </eq>
+						    </volist>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">保存</button>
+                  </div>
+                </form>
+              </div><!-- /.box -->
+</div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</block>

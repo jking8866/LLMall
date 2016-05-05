@@ -1,0 +1,71 @@
+<extend name="Common/main" />
+<block name="css">
+  <link rel="stylesheet" href="__PUBLIC__/flexselect/css/flexselect.css">
+  <link href="__PUBLIC__/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+</block>
+<block name="content">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        开设班级
+        <small>班级管理</small>
+      </h1>
+      <!-- <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol> -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    <div class="row">
+      <div class="col-md-6">
+      <section class="invoice">
+    	  <form action="__APP__/Clazz/doNextStep"   method="post">
+						<table id="demo" class="table table-striped" align="center">
+							<thead>
+								<tr>
+									<th align="center">课程名称</th>
+									<th align="center">开课时间</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+								<volist name="consumeList" id="bean">
+								<tr>
+									<td>{{$bean.consume_name}}</td>
+									<td>
+										<input size="16" type="text" value=""   id="open_consume_time{{$i}}" name="open_consume_time{{$i}}" readonly class="form-control form_datetime">
+										<input size="16" type="hidden"  id="id{{$i}}" name="id{{$i}}"   value="{{$bean.id}}" readonly  />
+									</td>
+								</tr>
+								</volist>
+							</tbody>
+						</table>
+							<div align="center">
+								<button type="submit" class="btn btn-success" style="width: 30%" >保存</button>
+							</div>
+						</form>
+						</section>
+</div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</block>
+<block name="customJS">
+  <!-- DataTables -->
+<script src="__PUBLIC__/flexselect/js/jquery.flexselect.js"></script>
+<script src="__PUBLIC__/flexselect/js/liquidmetal.js"></script>
+
+	<script type="text/javascript" src="__PUBLIC__/datetimepicker/js/bootstrap-datetimepicker.js"  charset="UTF-8"></script>
+
+<script  type="text/javascript">
+$(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+      
+</script>    
+</block>
+ 

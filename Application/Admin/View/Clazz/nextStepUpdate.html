@@ -1,0 +1,57 @@
+<extend name="Common/main" />
+<block name="css">
+ <link href="__PUBLIC__/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+</block>
+<block name="main-header"></block>
+<block name="main-sidebar"></block>
+<block name="footer"></block>
+<block name="content"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+
+				<div class="box box-primary">
+					<div class="box-header with-border">
+						<h3 class="box-title">班级课程时间</h3>
+					</div>
+					<!-- /.box-header -->
+					<section class="invoice">
+						<form action="__APP__/Clazz/doNextStep" method="post" target="_parent">
+							<table id="demo" class="table table-striped" align="center">
+								<thead>
+									<tr>
+										<th align="center">课程名称</th>
+										<th align="center">开课时间</th>
+									</tr>
+								</thead>
+								<tbody>
+
+									<volist name="consumeList" id="bean">
+									<tr>
+										<td>{{$bean.consume_name}}</td>
+										<td>
+											<input size="16" type="text" value="{{$bean.open_consume_time}}" id="open_consume_time{{$i}}" name="open_consume_time{{$i}}" readonly class="form-control form_datetime">
+											<input	size="16" type="hidden" id="id{{$i}}" name="id{{$i}}"	value="{{$bean.id}}" readonly /></td>
+									</tr>
+									</volist>
+								</tbody>
+							</table>
+							<div align="center">
+								<button type="submit" class="btn btn-success" style="width: 30%">保存</button>
+							</div>
+						</form>
+					</section>
+				</div>
+			 
+	 
+</div>
+ </block>
+<block name="customJS"> 
+<script type="text/javascript" src="__PUBLIC__/datetimepicker/js/bootstrap-datetimepicker.js"  charset="UTF-8"></script>
+<script type="text/javascript">
+$(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+</script> 
+
+</block>
+
+
+

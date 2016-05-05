@@ -1,0 +1,245 @@
+@font-face {
+    font-family: "veloico";
+    src: url("veloico.eot"); /* IE9 */
+    src: url("veloico.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("veloico.woff") format("woff"), /* chrome、firefox */
+    url("veloico.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url("veloico.svg#Beam") format("svg"); /* iOS 4.1- */
+}
+
+
+.vlico {
+    font-family: "veloico" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.vlico-size-1x {font-size: 8px;}
+.vlico-size-2x {font-size: 16px;}
+.vlico-size-3x {font-size: 24px;}
+.vlico-size-4x {font-size: 32px;}
+.vlico-size-5x {font-size: 40px;}
+
+.vlico-huodongxiaoxi:before {
+  content: "\f601";
+}
+
+.vlico-xinyongkaguanli:before {
+  content: "\f602";
+}
+
+.vlico-caidan:before {
+  content: "\f603";
+}
+
+.vlico-bangzhu:before {
+  content: "\f604";
+}
+
+.vlico-zijinjilu:before {
+  content: "\f605";
+}
+
+.vlico-shenfenrenzheng:before {
+  content: "\f606";
+}
+
+.vlico-shezhi:before {
+  content: "\f607";
+}
+
+.vlico-wexin:before {
+  content: "\f608";
+}
+
+.vlico-weixin-kong:before {
+  content: "\f609";
+}
+
+.vlico-fenxiang:before {
+  content: "\f60a";
+}
+
+.vlico-wenti:before {
+  content: "\f60b";
+}
+
+.vlico-youxichongzhi:before {
+  content: "\f60c";
+}
+
+.vlico-shouji:before {
+  content: "\f60d";
+}
+
+.vlico-saomazhifu:before {
+  content: "\f60e";
+}
+
+.vlico-benqiyinhuan:before {
+  content: "\f60f";
+}
+
+.vlico-shoujiyanzheng:before {
+  content: "\f610";
+}
+
+.vlico-shouye:before {
+  content: "\f611";
+}
+
+.vlico-gongdanxiaoxi:before {
+  content: "\f612";
+}
+
+.vlico-addqrcode:before {
+  content: "\f613";
+}
+
+.vlico-gongdanguanli:before {
+  content: "\f614";
+}
+
+.vlico-dianhua:before {
+  content: "\f615";
+}
+
+.vlico-shouyeshezhi:before {
+  content: "\f616";
+}
+
+.vlico-wo:before {
+  content: "\f617";
+}
+
+.vlico-yinhangkaguanli:before {
+  content: "\f618";
+}
+
+.vlico-jibenziliao:before {
+  content: "\f619";
+}
+
+.vlico-tixian:before {
+  content: "\f61a";
+}
+
+.vlico-shanghu:before {
+  content: "\f61b";
+}
+
+.vlico-zaixiankefu:before {
+  content: "\f61c";
+}
+
+.vlico-hongbao:before {
+  content: "\f61d";
+}
+
+.vlico-velofenqi:before {
+  content: "\f61e";
+}
+
+.vlico-xiaoxizhongxin:before {
+  content: "\f61f";
+}
+
+.vlico-xitongxiaoxi:before {
+  content: "\f620";
+}
+
+.vlico-velochongzhi:before {
+  content: "\f621";
+}
+
+.vlico-qalist:before {
+  content: "\f622";
+}
+
+.vlico-duanxinyanzhengma:before {
+  content: "\f623";
+}
+
+.vlico-dianjiqrcode:before {
+  content: "\f624";
+}
+
+.vlico-tuiguang:before {
+  content: "\f625";
+}
+
+.vlico-pyquan:before {
+  content: "\f626";
+}
+
+.vlico-steam:before {
+  content: "\f627";
+}
+
+.vlico-jianzhi:before {
+  content: "\f628";
+}
+
+.vlico-jiangxi:before {
+  content: "\f629";
+}
+
+.vlico-dianzishouju:before {
+  content: "\f62a";
+}
+
+.vlico-zhangdan:before {
+  content: "\f62b";
+}
+
+.vlico-barperks:before {
+  content: "\f62c";
+}
+
+.vlico-pyquan:before {
+  content: "\f62d";
+}
+
+.vlico-fukuan:before {
+  content: "\f62e";
+}
+
+.vlico-xinyongziliao:before {
+  content: "\f62f";
+}
+
+.vlico-velovip:before {
+  content: "\f630";
+}
+
+.vlico-baobiao:before {
+  content: "\f631";
+}
+
+.vlico-shoushimima:before {
+  content: "\f632";
+}
+
+.vlico-quanbuzhangdan:before {
+  content: "\f633";
+}
+
+.vlico-guanyuvelo:before {
+  content: "\f634";
+}
+
+.vlico-daikuanjilu:before {
+  content: "\f635";
+}
+
+.vlico-youhuihuodong:before {
+  content: "\f636";
+}
+
+
+

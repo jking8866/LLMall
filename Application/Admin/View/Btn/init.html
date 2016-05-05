@@ -1,0 +1,94 @@
+<extend name="Common/main" />
+<block name="css">
+  <link rel="stylesheet" href="__PUBLIC__/lte/plugins/datatables/dataTables.bootstrap.css">
+</block>
+ 
+<block name="content"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			按钮管理 <small>权限管理</small>
+			<span class="pull-right"> <a href="__APP__/Btn/addBtn" class="btn btn-primary">按钮菜单</a> </span>
+		</h1>
+		 
+        
+       
+       
+	</section>
+	
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<!-- left column -->
+			<div class="col-md-12">
+			 <div class="box">
+<!--                 <div class="box-header"> -->
+<!--                   <h3 class="box-title">Data Table With Full Features</h3> -->
+<!--                 </div>/.box-header -->
+                <div class="box-body">
+                  <table id="dataTable" class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th width="5%">序号</th>
+									<th width="20%">菜单</th>
+									<th width="20%">按钮名称</th>
+									<th width="20%">按钮ID</th>
+									<th width="15%" >操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<volist name="list" id="vo" key="k">
+								<tr>
+									<td>{{$k}}</td>
+									<td>{{$vo.name}}</td>
+									<td>{{$vo.btn_name}}</td>
+									<td>{{$vo.btn_id}}</td>
+									<td>
+										<div class="btn-group">
+											 <a href="__APP__/Btn/editBtn/id/{{$vo.id}}">修改</a> 
+										     <a href="__APP__/Btn/deleteBtn/id/{{$vo.id}}" >删除</a> 
+											 
+										</div>
+									</td>
+								</tr>
+								</volist>
+							</tbody>
+						</table>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+				
+
+
+			</div>
+		</div>
+	</section>
+	<!-- /.content -->
+</div>
+<!-- /.content-wrapper --> 
+
+
+<script  type="text/javascript">
+ 
+</script>   
+
+
+</block>
+<block name="customJS">
+  <!-- DataTables -->
+<script src="__PUBLIC__/lte/plugins/datatables/jquery.dataTables.js"></script>
+<script src="__PUBLIC__/lte/plugins/datatables/dataTables.bootstrap.js"></script>
+<script  type="text/javascript">
+$('#dataTable').DataTable();
+ 
+      
+</script>    
+</block>
+ 
+
+
+
+ 
+
+
+

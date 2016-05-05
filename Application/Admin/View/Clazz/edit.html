@@ -1,0 +1,180 @@
+<extend name="Common/main" />
+<block name="css">
+  <link rel="stylesheet" href="__PUBLIC__/flexselect/css/flexselect.css">
+</block>
+<block name="content">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        修改班级
+        <small>班级管理</small>
+      </h1>
+      <!-- <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol> -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    <div class="row">
+      <div class="col-md-6">
+      
+              <!-- Horizontal Form -->
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">基础信息</h3>
+                </div><!-- /.box-header -->
+                
+                
+                
+                
+                <!-- form start -->
+                <form role="form" method="post" action="__APP__/Clazz/update">
+                	<input type="hidden" name="id" value="{{$ClazzBean.id}}">
+                  <div class="box-body">
+                  	<div class="form-group">
+                  		<label for="clazz_type">班级类型</label>
+	                    <div class="radio">
+	                      <label  class="radio-inline">
+<!-- 	                      <input type="radio" name="clazz_type" <eq name="ClazzBean.clazz_type" value="1">checked="checked"</eq>  value="1"  >一对一 -->
+<!-- 	                      </label> -->
+<!-- 	                      <label  class="radio-inline"> -->
+<!-- 	                      <input type="radio" name="clazz_type" <eq name="ClazzBean.clazz_type" value="2">checked="checked"</eq>   value="2">一对多 -->
+<!-- 	                      </label> -->
+	                      <label  class="radio-inline">
+	                      <input type="radio" name="clazz_type" <eq name="ClazzBean.clazz_type" value="3">checked="checked"</eq>   value="3" >集体班
+	                      </label>
+	                      </div>
+	                    
+	                </div>
+                    <div class="form-group">
+                      <label for="clazz_name">班名称</label>
+                      <input type="text" class="form-control" name="clazz_name" id="clazz_name" value="{{$ClazzBean.clazz_name}}">
+                    </div>
+<!--                     <div class="form-group"> -->
+<!--                       <label for="course_id">课程名</label> -->
+<!--                        <select class="form-control" id="course_id" name="course_id"> -->
+<!--                       		<option value="0">请选择</option> -->
+<!-- 							<volist name="CourseList" id="CourseVo"  > -->
+<!-- 						              <eq name="ClazzBean.course_id" value="$CourseVo.id">  -->
+<!-- 						                        <option value='{{$CourseVo.id}}'  selected="selected"     > {{$CourseVo.course_name}}</option> -->
+<!-- 						               <else/> -->
+<!-- 						                        <option value='{{$CourseVo.id}}' > {{$CourseVo.course_name}}</option> -->
+<!-- 						               </eq> -->
+<!-- 						    </volist> -->
+<!--                       </select> -->
+                     
+<!--                     </div> -->
+                    <div class="form-group">
+                      <label for="clazz_grade">年级</label>
+                     	<select class="form-control"  name="clazz_grade" >
+                     		<option <eq name="ClazzBean.clazz_grade" value="0">selected="selected"</eq> value="0">请选择</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="1">selected="selected"</eq>   value="1">一年级</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="2">selected="selected"</eq>   value="2">二年级</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="3">selected="selected"</eq>   value="3">三年级</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="4">selected="selected"</eq>   value="4">四年级</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="5">selected="selected"</eq>   value="5">五年级</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="6">selected="selected"</eq>   value="6">六年级</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="7">selected="selected"</eq>   value="7">初一</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="8">selected="selected"</eq>   value="8">初二</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="9">selected="selected"</eq>   value="9">初三</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="10">selected="selected"</eq>   value="10">高一</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="11">selected="selected"</eq>   value="11">高二</option>
+                        	<option <eq name="ClazzBean.clazz_grade" value="12">selected="selected"</eq>   value="12">高三</option>
+                      	</select>
+                    </div>
+                    <div class="form-group">
+                      <label for="teacher_id">授课教师</label>
+<!--                        	<select class="form-control" id="teacher_id"  name="teacher_id"> -->
+<!-- 							<option></option> -->
+<!-- 							<volist name="TeacherList" id="vo"> -->
+<!-- 								<option value="{{$vo.id}}">{{$vo.teacher_name}}</option> -->
+<!-- 							</volist> -->
+<!-- 						</select> -->
+						<select class="form-control" id="teacher_id" name="teacher_id">
+                      		<option value="0">请选择</option>
+							<volist name="TeacherList" id="TeacherVo"  >
+						              <eq name="ClazzBean.teacher_id" value="$TeacherVo.id"> 
+						                        <option      value='{{$TeacherVo.id}}'  selected="selected"     > {{$TeacherVo.teacher_name}}</option>
+						               <else/>
+						                        <option      value='{{$TeacherVo.id}}'       > {{$TeacherVo.teacher_name}}</option>
+						               </eq>
+						    </volist>
+                      	</select>
+                    </div>
+                    <div class="form-group">
+                      <label for="personnel_id">教务老师</label>
+                    	 <select class="form-control" id="personnel_id"  name="personnel_id">
+							<option></option>
+							<volist name="PersonnelList" id="PersonnelVo"  >
+						              <eq name="ClazzBean.personnel_id" value="$PersonnelVo.id"> 
+						                        <option      value='{{$PersonnelVo.id}}'  selected="selected"     > {{$PersonnelVo.personnel_name}}</option>
+						               <else/>
+						                        <option      value='{{$PersonnelVo.id}}'       > {{$PersonnelVo.personnel_name}}</option>
+						               </eq>
+						    </volist>
+						 </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="clazz_count">共多少节课</label>
+                      <input type="text" class="form-control" name="clazz_count" id="clazz_count"  value="{{$ClazzBean.clazz_count}}">
+                    </div>
+                    <div class="form-group">
+                      <label for="clazz_each_hour">每节课小时数（单位:小时）</label>
+                      <input type="text" class="form-control" name="clazz_each_hour" id="clazz_each_hour"  value="{{$ClazzBean.clazz_each_hour}}">
+                    </div>
+                    <div class="form-group">
+                      <label for="clazz_hour_cost">单价（每小时的费用 单位:元）</label>
+                      <input type="text" class="form-control" name="clazz_hour_cost" id="clazz_hour_cost"  value="{{$ClazzBean.clazz_hour_cost}}">
+                    </div>
+                    <div class="form-group">
+                      <label for="clazz_material_cost">材料费（单位:元）</label>
+                      <input type="text" class="form-control" name="clazz_material_cost" id="clazz_material_cost"  value="{{$ClazzBean.clazz_material_cost}}">
+                    </div>
+                    <div class="form-group">
+                      <label for="clazz_remark">备注</label>
+                      <textarea class="form-control" rows="6"  name="clazz_remark"  >{{$ClazzBean.clazz_remark}}</textarea>
+                    </div>
+                    
+                    
+                    
+                  </div> 
+                  <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">提交</button>
+                  </div>
+                </form>
+              </div><!-- /.box -->
+</div>
+
+<!-- iframe -->
+ <div class="col-md-6">
+ 
+  	<iframe id="studert_sign_in_iframe" name="studert_sign_in_iframe" src="__APP__/Clazz/nextStepUpdate/clazz_id/{{$ClazzBean.id}}" width="100%" height="950px" style="border: 0px"></iframe>
+ 
+ 
+ </div>
+</div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</block>
+<block name="customJS">
+  <!-- DataTables -->
+<script src="__PUBLIC__/flexselect/js/jquery.flexselect.js"></script>
+<script src="__PUBLIC__/flexselect/js/liquidmetal.js"></script>
+<script  type="text/javascript">
+
+$(function(){
+	$("#teacher_id").flexselect();
+	$("#personnel_id").flexselect();
+// 	$("#personnel_id_flexselect").val
+});
+      
+</script>    
+</block>
+ 

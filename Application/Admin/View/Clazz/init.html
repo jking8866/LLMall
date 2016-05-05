@@ -1,0 +1,162 @@
+<extend name="Common/main" />
+<block name="css">
+<link rel="stylesheet" href="__PUBLIC__/lte/plugins/datatables/dataTables.bootstrap.css">
+<style>
+table {
+	 ;
+}      
+</style>
+</block>
+<block name="control_sidebar">
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+          <li><a href="#" data-toggle="control-sidebar">取消</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- Home tab content -->
+          <div class="tab-pane active" id="control-sidebar-home-tab">
+            <h5 class="control-sidebar-heading">修改信息</h5>
+             <form role="form" method="post" action="__APP__/Course/update">
+             	  <input type="hidden" name="id" id="bean_id" >
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="student_name">姓名</label>
+                      <input type="text" class="form-control" name="course_name"  id="course_name" placeholder="">
+                    </div>
+                     <button type="submit" class="btn btn-primary"   >提交</button>
+                     
+                  </div><!-- /.box-body -->
+                </form>
+
+          </div><!-- /.tab-pane -->
+          
+        </div>
+   
+      </aside><!-- /.control-sidebar -->
+    
+     </block>
+<block name="content"> <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			班级列表 <small>班级管理</small>
+		</h1>
+		<!-- <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol> -->
+	</section>
+	
+	<!-- Main content -->
+	<section class="invoice">
+		 <div class="row">
+            <div class="col-xs-12 table-responsive">
+              <table id  ="demo" class="table table-striped">
+                 <thead>
+                      <tr>
+                        
+                        <th width="10%">班级名称</th>
+                        <th>课时(总价)</th>
+                        <th>授课教师</th>
+                        <th>教务老师</th>
+                        <th>时长(小时)</th>
+                        <th>课时(节)</th>
+                        <th>单价(元/小时)</th>
+                      	<th>状态</th>
+                        
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+								<volist name="ClazzList" id="bean">
+								<tr>
+									 
+									<td>{{$bean.clazz_name}}</td>
+									<td>{{$bean.total_cost}}</td>
+ 
+			                        <td>{{$bean.teacher_name}}</td>
+			                        <td>{{$bean.personnel_name}}</td>
+			                        <td>{{$bean.clazz_each_hour}}</td>
+			                       
+			                        <td>{{$bean.clazz_count}}</td>
+			                        <td>{{$bean.clazz_hour_cost}}</td>
+			                        <td>
+			                        
+			                        <switch name="bean.clazz_state">
+									    <case value="1">报名期</case>
+									    <case value="2">进行中</case>
+									    <case value="3">完结</case>
+									</switch>
+			                        
+			                        </td>
+									<td>
+									 <a href="__APP__/Clazz/edit/clazz_id/{{$bean.id}}"  >编辑</a>
+									 <a href="__APP__/Clazz/updateClazzState/clazz_id/{{$bean.id}}"  >开课</a>
+									
+									
+									</td>
+								</tr>
+								</volist>
+
+						 
+                    </tbody>
+              </table>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+		 
+	</section>
+	<!-- /.content -->
+</div>
+<!-- /.content-wrapper --> 
+
+
+<script  type="text/javascript">
+function ajax_getBeanInfo(bean_id){
+	 $('#bean_id').val("");
+	 $('#course_name').val("");
+	$.ajax({
+		type: "get",
+		url : "__APP__/Course/ajax_getBeanInfo",
+		data :  {"bean_id":bean_id},
+		dataType : "json",
+		success : function( obj ){
+			 $('#bean_id').val(obj.id);
+			 $('#course_name').val(obj.course_name);
+			 
+		},
+		error : function( XMLHttpRequest, textStatus, errorThrown ){
+		},
+		complete : function (XMLHttpRequest, textStatus) {
+		}
+	});
+}
+
+
+
+ 
+</script>   
+
+
+</block>
+<block name="customJS">
+  <!-- DataTables -->
+<script src="__PUBLIC__/lte/plugins/datatables/jquery.dataTables.js"></script>
+<script src="__PUBLIC__/lte/plugins/datatables/dataTables.bootstrap.js"></script>
+<script  type="text/javascript">
+$('#example1').DataTable();
+$('#demo').DataTable();
+      
+</script>    
+</block>
+ 
+
+
+
+ 
+
+
+

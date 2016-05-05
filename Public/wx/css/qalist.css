@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import url("../font/font-awesome.min.css");
+dl.qalist {
+  display: block;
+  margin: 20px 15px;
+  margin-top: 22px;
+  position: relative;
+}
+dl.qalist dt {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 10px;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  background-color: #fff;
+  position: relative;
+}
+dl.qalist dt:before {
+  display: block;
+  height: 28px;
+  width: 28px;
+  line-height: 28px;
+  border-radius: 28px;
+  content: "\f604";
+  font-family: 'veloico' !important;
+  font-size: 22px;
+  color: #fff;
+  background-color: #EF5D4B !important;;
+  text-align: center;
+  position: absolute;
+  top:-4px;
+  left: -10px;
+  z-index: 1;
+}
+dl.qalist dd {
+  display: block;
+  min-height: 30px;
+  background-color: #fff;
+  position: relative;
+  z-index: 0;
+  padding:5px 15px;
+  border: 1px solid #dedede;
+  border-top:none;
+  margin-right: 3px;
+  margin-bottom: 15px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-size: 12px;
+}
+dl.qalist dd:lang(answer) > q {
+  quotes:"\f10d" "\f10e";
+  display: block;
+  font-family: 'FontAwesome' !important;
+  position: relative;
+  padding:14px 24px;
+}
+dl.qalist dd:lang(answer) > q:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #6ec84e;
+}
+dl.qalist dd:lang(answer) > q:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #6ec84e;
+}

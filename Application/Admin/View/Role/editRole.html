@@ -1,0 +1,136 @@
+<extend name="Common/main" />
+<block name="content">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        新增角色
+        <small>角色管理</small>
+      </h1>
+      <!-- <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol> -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+              <!-- Horizontal Form -->
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">基础信息</h3>
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                 <form action="__APP__/Role/updateRole" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id" id="role_id"  value="{{$RoleBean.id}}" >
+                  <div class="box-body">
+                    <div class="form-group col-xs-9">
+                      <label for="activitytitle">名称</label>
+                      <input class="form-control" id="role_name" name="role_name" placeholder="名称" value="{{$RoleBean.role_name}} ">
+                    </div>
+                    <div class="form-group col-xs-9">
+                      <label for="activitytitle">菜单</label>
+                      <div class="controls">
+							 
+							<table class="table  table-bordered    ">
+							    <thead>
+								     <tr>
+								        <th>菜单</th>
+								        <th>按钮</th>
+								     </tr>
+								</thead>
+								<tbody>    
+									<volist name="Menu" id="MenuVo" empty="" key="k">
+								      <tr>
+								      		<td> 
+								      		<input type="checkbox" id="menu_{{$MenuVo.id}}" name="menu_id[]" value="{{$MenuVo.id}}" style="vertical-align:-3px;">
+								      		{{$MenuVo.name}}
+								      		<td>
+								      		<volist name="MenuVo.btn" id="btnVo" empty="" key="k">
+								      			<ul id=" " class="nav nav-list  ">
+													<li >
+													<input type="checkbox" id="btn_{{$MenuVo.id}}" name="btn_id[]" value="{{$btnVo.id}}" style="vertical-align:-3px;">	
+													 {{$btnVo.btn_name}} 
+													</li>
+       											</ul>
+								      		</volist>
+								      		 
+								      </tr>
+								      </volist>
+								 </tbody>  
+							</table>
+						</div>
+                    </div>
+                  </div>
+
+                  <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">保存</button>
+                  </div>
+                </form>
+              </div><!-- /.box -->
+</div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</block>
+ <block name="customJS">
+    
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+		$('#myModal').modal('show');
+		$("input[name^='menu_id']").each(function(){
+			var r = ajax_getRoleMenu( $('#role_id').val() ,$(this).val());
+			// alert(r);
+			if( r == 1 ){
+					$(this).attr("checked","checked");
+			}
+			
+		})
+		
+		$("input[name^='btn_id']").each(function(){
+			var r = ajax_getRoleBtn( $('#role_id').val() ,$(this).val());
+			// alert(r);
+			if( r == 1 ){
+					$(this).attr("checked","checked");
+			}
+			
+		})
+		$('#myModal').modal('hide');
+
+	});
+	
+	function ajax_getRoleMenu(role_id,menu_id){
+		  var r = '';
+			$.ajax({
+			   type: "get",
+			   url: "__APP__/Role/ajax_getRoleMenu/role_id/"+role_id+"/menu_id/"+menu_id,
+			   async: false,
+			   success: function(msg){
+
+			      r = msg;
+			   }
+			});
+			 return r;
+	}
+	
+	function ajax_getRoleBtn(role_id,btn_id){
+		  var r = '';
+			$.ajax({
+			   type: "get",
+			   url: "__APP__/Role/ajax_getRoleBtn/role_id/"+role_id+"/btn_id/"+btn_id,
+			   async: false,
+			   success: function(msg){
+			      r = msg;
+			   }
+			});
+			 return r;
+	}
+     
+	</script> 
+</block>

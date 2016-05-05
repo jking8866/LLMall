@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@import url("../font/veloico.css");
+body {
+  font-family: "Segoe UI", "Lucida Grande","Helvetica Neue", Helvetica,STHeiTi, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif !important;
+}
+.color-orange {color: #fd6500 !important;}
+.color-black {color: #333333 !important;}
+.color-blue { color: #08a7f1 !important;}
+.color-green {color: #6ec84e !important;}
+.color-red {color: #EF5D4B !important;}
+.font-revoke {
+  font-weight: 500;
+  font-style: normal;
+}
+.ui-searchbar-stable {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+small.color-tiny-gray {
+  color: #707070 !important;
+}.terms-title {
+  text-align: center;
+  font-weight: 700;
+  margin: 15px 0px;
+}
+.qrcodeimg {
+  height: 200px !important;
+  width: 200px !important;
+  padding: 0px !important;
+}
+.ui-list-link>li.no-link:after {
+  content: "" !important;
+  display: none !important;
+  margin: 0px !important;
+}
+
+.msg-btn {
+  font-weight: 500;
+  margin-top: 5px;
+}
+.ui-footer {
+  height: 44px;
+  background-color: #fff;
+}
+.ui-footer .footerbar-link li i.vlico {line-height: 44px;}
+.ui-footer .footerbar-link li.active {
+  background-color: #3385E6;
+  color: #fff;
+}
+.ui-row-flex-ver {min-height: 30px;}
+/*可共用的样式*/
+/*状态条*/
+.statistics-block {
+  display: block;
+}
+.statistics-block .statistics-bar {
+  margin: 0px;
+  background-color: #fff;
+}
+.statistics-block .statistics-bar li {
+  padding: 5px 0px;
+  border-color: #dbdbdb !important;
+}
+.statistics-block .statistics-bar li.ui-border-b {
+  border-bottom: 1px solid #dbdbdb !important;
+}
+.statistics-title {
+  font-size: 12px !important;
+  font-weight: 600;
+  color: #999;
+}
+.statistics-price {
+  font-size: 14px !important;
+  font-weight: 600;
+}
+/*菜单*/
+.ui-menus {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  position: static;
+  margin: 10px 0px;
+}
+.ui-menus-list>li {
+  margin-left: 0px !important;
+}
+.ui-menus-list .ui-list-info {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.ui-menus-list-icons {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 7px 10px;
+}
+.ui-menus-list-icons > i {
+  font-size: 30px;
+}
+.ui-menus-list .ui-list-info > h4,
+.ui-menus-list .ui-list-info > .ui-txt-info{
+  font-size: 14px;
+}
+.ui-menus-list .ui-list-info > .ui-badge-muted,
+.ui-menus-list .ui-list-info > .ui-badge-num {
+  font-size: 12px;
+}

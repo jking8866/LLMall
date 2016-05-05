@@ -1,0 +1,53 @@
+[ 2016-05-04T23:16:58+08:00 ] ::1 /LLMall/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+
+[ 2016-05-04T23:17:00+08:00 ] ::1 /LLMall/Login/loginPage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+
+[ 2016-05-04T23:17:05+08:00 ] ::1 /LLMall/Login/loginCheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000091s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+
+[ 2016-05-04T23:17:05+08:00 ] ::1 /LLMall/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+
+[ 2016-05-04T23:17:05+08:00 ] ::1 /LLMall/Index/dist/img/user4-128x128.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+
+[ 2016-05-04T23:17:05+08:00 ] ::1 /LLMall/Public/fonts/ionicons.ttf?v=2.0.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-04T23:17:05+08:00 ] ::1 /LLMall/Public/fonts/ionicons.woff?v=2.0.1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000201s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-04T23:17:11+08:00 ] ::1 /LLMall/Order/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+ERR: 无法加载控制器:Order
+
+[ 2016-05-04T23:17:16+08:00 ] ::1 /LLMall/Clazz/init
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000179s ]
+
+[ 2016-05-04T23:17:16+08:00 ] ::1 /LLMall/Clazz/dist/img/user4-128x128.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000194s ]
+
